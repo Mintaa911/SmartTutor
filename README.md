@@ -6,11 +6,6 @@ SmartTutor is an online tutoring platform that connects African students with ex
 
 - [Features](#features)
 - [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-
 ## Features
 
 - **Search system**: Students can search for the best tutor for their specific needs and learning style, based on factors such as academic performance, preferred learning style, and subject area. The tutor can be a peer student or a professional.
