@@ -1,3 +1,4 @@
+//@ts-nocheck
 import { Stack, Flex } from "@chakra-ui/react";
 import ProfileCard from "./profile_card";
 let profiles = [
