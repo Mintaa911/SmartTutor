@@ -7,7 +7,7 @@ import connect from "./config/db.js";
 import ErrorHandler from "./middleware/error.js";
 
 // Import Routes
-import { user } from "./route/index.js";
+import { user, auth, review } from "./route/index.js";
 
 // Env
 dotenv.config({ path: "./config/.env" });
@@ -20,9 +20,12 @@ const app = express();
 app.use(cors());
 app.use(morgan("dev"));
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Routes
+app.use("/api/v1/auth", auth);
 app.use("/api/v1/user", user);
+app.use("/api/v1/review", review);
 
 // Run Server
 app.use(ErrorHandler);

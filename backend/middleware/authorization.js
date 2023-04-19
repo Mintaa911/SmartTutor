@@ -16,14 +16,17 @@ export default async function authorize(req, res, next) {
   }
 
   try {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    console.log(process.env.JWT_SECRET);
+    let decoded = jwt.verify(token, process.env.JWT_SECRET);
+    console.log(token);
 
-    const usr = await User.findById(decoded.id);
+    const usr = await User.findById(decoded._id);
     if (!usr) {
       return next(new ErrorResponse("Unauthorized route", 401));
     }
     req.user = usr;
   } catch (error) {
+    console.log(error);
     return next(new ErrorResponse("Unauthorized route", 401));
   }
 

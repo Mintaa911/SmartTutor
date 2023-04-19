@@ -1,2 +1,5 @@
 import user from "./user.js";
-export { user };
+import auth from "./auth.js";
+import review from "./review.js";
+
+export { user, auth, review };
