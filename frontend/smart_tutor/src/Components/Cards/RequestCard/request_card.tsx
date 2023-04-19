@@ -69,6 +69,7 @@ export default function Request_card({ name, subject, time, date, status }) {
           <Button
             colorScheme={"gray"}
             width="30%" 
+            colorScheme = {status === "accepted"? "green" : "red"}
           >
             {status === "accepted"? "Accepted" : "Rejected"}
           </Button>
