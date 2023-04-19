@@ -1,7 +1,6 @@
 //@ts-nocheck
 
 import { useState } from "react";
-import { ChakraProvider } from "@chakra-ui/react";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Autocomplete from "@mui/material/Autocomplete";
 import Button from "@mui/material/Button";
@@ -29,40 +28,38 @@ export default function SearchBar() {
 	};
 
 	return (
-		<ChakraProvider>
-			<ThemeProvider theme={muiTheme}>
-				<Container maxWidth='sm'>
-					<br />
-					<br />
-					<Stack direction='row' spacing={2} alignItems='center'>
-						<Autocomplete
-							sx={{
-								width: "90%",
-								"& .MuiInputLabel-root": { color: "gray.500" },
-							}}
-							multiple
-							id='search-bar'
-							options={top100Films}
-							value={value}
-							onChange={(event, newValue) => {
-								setValue(newValue);
-							}}
-							getOptionLabel={(option) => option.title}
-							renderInput={(params) => (
-								<TextField {...params} label='Search' placeholder='Favorites' />
-							)}
-						/>
-						<Button
-							sx={{ color: "black" }}
-							variant='contained'
-							onClick={handleSearch}
-							startIcon={<SearchIcon />}
-						>
-							Search
-						</Button>
-					</Stack>
-				</Container>
-			</ThemeProvider>
-		</ChakraProvider>
+		<ThemeProvider theme={muiTheme}>
+			<Container maxWidth='sm'>
+				<br />
+				<br />
+				<Stack direction='row' spacing={2} alignItems='center'>
+					<Autocomplete
+						sx={{
+							width: "90%",
+							"& .MuiInputLabel-root": { color: "gray.500" },
+						}}
+						multiple
+						id='search-bar'
+						options={top100Films}
+						value={value}
+						onChange={(event, newValue) => {
+							setValue(newValue);
+						}}
+						getOptionLabel={(option) => option.title}
+						renderInput={(params) => (
+							<TextField {...params} label='Search' placeholder='Favorites' />
+						)}
+					/>
+					<Button
+						sx={{ color: "black" }}
+						variant='contained'
+						onClick={handleSearch}
+						startIcon={<SearchIcon />}
+					>
+						Search
+					</Button>
+				</Stack>
+			</Container>
+		</ThemeProvider>
 	);
 }

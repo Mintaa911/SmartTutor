@@ -86,7 +86,6 @@ export default function partners_section() {
 						top={"-20%"}
 						left={0}
 						zIndex={-1}
-						color={useColorModeValue("red.50", "red.400")}
 					/>
 					<Box
 						position={"relative"}
