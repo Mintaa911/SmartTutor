@@ -1,5 +1,5 @@
 import React from "react";
-import RequestCard from "../../Components/common/TutorRequestCard";
+import RequestCard from "../../Components/TutorRequestCard";
 import { Avatar, Button, ButtonGroup, Divider } from "@chakra-ui/react";
 
 const myProp = {
