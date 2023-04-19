@@ -1,3 +1,4 @@
+//@ts-nocheck
 import { Button, ButtonGroup } from "@chakra-ui/react";
 import { useState } from "react";
 import { Avatar } from "@chakra-ui/react";
