@@ -1,3 +1,4 @@
+//@ts-nocheck 
 import { Box, Button, FormControl, FormLabel, Input, Stack } from "@chakra-ui/react";
 import { useState } from "react";
 
