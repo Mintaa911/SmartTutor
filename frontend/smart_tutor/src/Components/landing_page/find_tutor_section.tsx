@@ -75,7 +75,7 @@ export default function Find_tutor_section() {
 					<Text color={"gray.500"} align='center'>
 						Our online platform connects you with expert tutors who can help you
 						succeed in any subject. Choose specific topics or chapters you need
-						help with and get matched with a tutor who is right for you. Don't
+						help with and get matched with a tutor who is right for you. Do not
 						let difficult subjects hold you back - join SmartTutor today and
 						unlock your full potential.
 					</Text>

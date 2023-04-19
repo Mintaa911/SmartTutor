@@ -14,7 +14,7 @@ import {
 	CardFooter,
 } from "@chakra-ui/react";
 
-export default function mission_card({ title, children }) {
+export default function MissionCard({ title, children }) {
 	return (
 		<Card maxW='sm'>
 			<CardBody>

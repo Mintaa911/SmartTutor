@@ -48,7 +48,7 @@ export default function Become_tutor_section() {
 						</Text>
 						<br />
 						<Text as={"span"} color={"red.400"}>
-							on African's
+							on African&apos;s
 						</Text>
 					</Heading>
 					<Text color={"gray.500"}>

@@ -1,4 +1,4 @@
-//@ts-nocheck 
+//@ts-nocheck
 /** 
   make a card with to show that a user has a request from a studnet
   the should have the stuendet information and that tages of subject
@@ -71,7 +71,6 @@ export default function Request_card({ name, subject, time, date, status }) {
 					</ButtonGroup>
 				)) || (
 					<Button
-						colorScheme={"gray"}
 						width='30%'
 						colorScheme={status === "accepted" ? "green" : "red"}
 					>
