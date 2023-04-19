@@ -17,7 +17,6 @@ function LoginPage() {
 		event.preventDefault();
 		// Handle form submission
 	};
-
 	return (
 		<Box
 			w='100%'
