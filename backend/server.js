@@ -7,7 +7,7 @@ import connect from "./config/db.js";
 import ErrorHandler from "./middleware/error.js";
 
 // Import Routes
-import { user, auth, review } from "./route/index.js";
+import { user, auth, review, search } from "./routes/index.js";
 
 // Env
 dotenv.config({ path: "./config/.env" });
@@ -26,6 +26,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/api/v1/auth", auth);
 app.use("/api/v1/user", user);
 app.use("/api/v1/review", review);
+app.use("/api/v1/", search);
 
 // Run Server
 app.use(ErrorHandler);
