@@ -11,6 +11,11 @@ const userSchema = new mongoose.Schema(
       required: true,
       minlength: 2,
     },
+    bio: {
+      type: String,
+      trim: true,
+      minlength: 4,
+    },
     phone: {
       type: String,
       trim: true,
@@ -22,24 +27,18 @@ const userSchema = new mongoose.Schema(
       required: true,
       unique: 255,
     },
-    company: {
-      type: String,
-      trim: true,
-      minlength: 2,
-    },
     address: {
       type: String,
       minlength: 2,
     },
-    city: {
+    bankAccount: {
       type: String,
       trim: true,
-      minlength: 2,
+      minlength: 12,
     },
     tags: [
       {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Permissions",
+        type: String,
         nullable: true,
       },
     ],
@@ -91,15 +90,14 @@ export function validateUserSignup(user) {
     phone: Joi.string()
       .length(10)
       .pattern(/^[0-9]+$/),
-    company: Joi.string().min(2).max(20),
+    bankAccount: Joi.string().min(10).max(20),
     address: Joi.string().min(2).max(30),
-    city: Joi.string().min(3).max(30),
+    tags: Joi.array(),
     password: Joi.string()
       .min(6)
       .pattern(new RegExp("^[a-zA-Z0-9]{3,30}$"))
       .required(),
     password_confirmation: Joi.string().required().valid(Joi.ref("password")),
-
     email: Joi.string()
       .email({ minDomainSegments: 2, tlds: { allow: ["com", "net"] } })
       .required(),
