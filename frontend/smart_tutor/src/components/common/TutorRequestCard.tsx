@@ -1,3 +1,4 @@
+import React from "react";
 import AddIcon from "@mui/icons-material/Add";
 import { Input, Button } from "@chakra-ui/react";
 import { useState } from "react";
@@ -69,11 +70,10 @@ export default function RequestCard({
 						3 days ago
 					</Text>
 				</div>
-
+				<Text mt={2} color={"gray.900"} fontSize={"xl"}>
+					{tutor}
+				</Text>
 				<div>
-					<Text mt={2} color={"gray.900"} fontSize={"sm"}>
-						Tutor:{tutor}
-					</Text>
 					<Text mt={2} color={"gray.900"} fontSize={"sm"}>
 						Subject:{subject}
 					</Text>

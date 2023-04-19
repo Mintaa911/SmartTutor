@@ -16,7 +16,7 @@ import {
 	useColorModeValue,
 } from "@chakra-ui/react";
 
-export default function Haro_section() {
+export default function Hero_section() {
 	return (
 		<div>
 			<Stack
