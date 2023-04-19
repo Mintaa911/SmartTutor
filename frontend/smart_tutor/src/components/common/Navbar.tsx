@@ -11,8 +11,9 @@ import {
 	ModalCloseButton,
 	useDisclosure,
 } from "@chakra-ui/react";
-import SearchResults from "../Cards/Search_result/Search_result_list";
 import SearchBar from "../Cards/Search_bar";
+import SearchResults from "../Cards/Search_result/Search_result_list";
+
 export default function Navbar() {
 	const [authenticated, setAuthenticated] = useState(true);
 	const [dropDown, setDropDown] = useState(false);
