@@ -22,7 +22,7 @@ export default function Navbar() {
 
 	return (
 		<div>
-			<div className='flex justify-between shadow-md h-12 px-2 md:px-8 items-center mb-8'>
+			<div className='w-full flex justify-between shadow-md h-12 px-2 md:px-8 items-center mb-8'>
 				<div className='flex gap-4 md:gap-8'>
 					<h1 className='text-lg md:text-2xl'>SmartTutor</h1>
 					<div className='flex gap-4 items-center'>
@@ -90,7 +90,7 @@ export default function Navbar() {
 					</div>
 				)}
 			</div>
-			{/* <div className='w-[80%] mx-auto bg-white'>
+			<div className='w-[80%] mx-auto bg-white'>
 				<Modal size='6xl' isOpen={isOpen} onClose={onClose}>
 					<ModalOverlay />
 					<ModalContent>
@@ -101,7 +101,7 @@ export default function Navbar() {
 						</ModalBody>
 					</ModalContent>
 				</Modal>
-			</div> */}
+			</div>
 		</div>
 	);
 }
