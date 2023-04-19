@@ -1,5 +1,4 @@
 //@ts-nocheck 
-
 // import haro section
 import {Container} from '@chakra-ui/react';
 import Haro_section from '../Components/landing_page/haro_section';
@@ -9,7 +8,6 @@ import Partners_section from '../Components/landing_page/partners_section';
 import Our_mission_section from '../Components/landing_page/our_mission_section/our_mission_section';
 import TopRatedTutorsSection from '../Components/landing_page/top_rated_tutors/top_rated_tutors_section';
 import All_request_cards from '../Components/Cards/RequestCard/all_request_cards';
-
 
 import { Button } from '@chakra-ui/react';
 export default function Home() {
