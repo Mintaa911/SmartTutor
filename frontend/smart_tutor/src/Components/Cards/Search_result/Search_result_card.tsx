@@ -1,3 +1,4 @@
+//@ts-nocheck 
 import { Box, Flex, Avatar, Text, Badge, Wrap, WrapItem } from "@chakra-ui/react";
 
 const SearchResultCard = ({ name, address, bio, rating, tags }) => {

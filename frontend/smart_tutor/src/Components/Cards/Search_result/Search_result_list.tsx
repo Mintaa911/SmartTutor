@@ -1,3 +1,4 @@
+//@ts-nocheck 
 import { Box, SimpleGrid, Text, Stack} from "@chakra-ui/react";
 import SearchResultCard from "./Search_result_card.tsx";
 

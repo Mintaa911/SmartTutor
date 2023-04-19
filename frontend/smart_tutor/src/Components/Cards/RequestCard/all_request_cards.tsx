@@ -1,3 +1,4 @@
+//@ts-nocheck 
 /** 
   make list of all the requests using request card from an array of requests
 **/

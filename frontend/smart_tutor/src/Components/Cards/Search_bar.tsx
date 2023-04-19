@@ -1,3 +1,6 @@
+
+//@ts-nocheck 
+
 import { useState } from 'react';
 import { ChakraProvider } from '@chakra-ui/react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';

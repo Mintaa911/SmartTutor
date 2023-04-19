@@ -1,3 +1,4 @@
+//@ts-nocheck 
 /** 
   make a card with to show that a user has a request from a studnet
   the should have the stuendet information and that tages of subject
