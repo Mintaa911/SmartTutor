@@ -90,7 +90,7 @@ export default function Navbar() {
 					</div>
 				)}
 			</div>
-			<div className='w-[80%] mx-auto bg-white'>
+			{/* <div className='w-[80%] mx-auto bg-white'>
 				<Modal size='6xl' isOpen={isOpen} onClose={onClose}>
 					<ModalOverlay />
 					<ModalContent>
@@ -101,7 +101,7 @@ export default function Navbar() {
 						</ModalBody>
 					</ModalContent>
 				</Modal>
-			</div>
+			</div> */}
 		</div>
 	);
 }
