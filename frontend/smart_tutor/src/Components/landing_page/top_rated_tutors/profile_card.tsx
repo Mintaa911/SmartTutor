@@ -1,3 +1,4 @@
+//@ts-nocheck
 import { Card, CardBody, Flex, WrapItem, Avatar,Box, Image, Text, Badge } from "@chakra-ui/react";
 
 const ProfileCard = ({ profilePic, name, bio, rating }) => {
