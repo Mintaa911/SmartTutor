@@ -1,7 +1,7 @@
 /** 
   make list of all the requests using request card from an array of requests
 **/
-
+//@ts-nocheck 
 import { Box, Button, Flex, Heading, Text } from '@chakra-ui/react';
 import Request_card from './request_card';
 

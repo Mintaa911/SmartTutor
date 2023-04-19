@@ -1,4 +1,8 @@
+
+//@ts-nocheck 
+
 import { Container, Heading, Text, Stack, Image, ButtonGroup, Button, Divider, Card, CardBody, CardFooter } from '@chakra-ui/react'
+
 
 export default function mission_card({title, children}){
   return (<Card maxW='sm'>

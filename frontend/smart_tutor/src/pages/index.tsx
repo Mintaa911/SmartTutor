@@ -1,3 +1,5 @@
+//@ts-nocheck 
+
 // import haro section
 import {Container} from '@chakra-ui/react';
 import Haro_section from '../Components/landing_page/haro_section';

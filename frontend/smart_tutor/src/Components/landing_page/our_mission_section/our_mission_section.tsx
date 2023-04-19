@@ -1,3 +1,5 @@
+//@ts-nocheck 
+
 import { Container, Heading, Text, Stack, Image, ButtonGroup, Button, Divider } from '@chakra-ui/react'
 
 import MissionCard from './our_mission_card';

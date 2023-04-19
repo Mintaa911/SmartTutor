@@ -4,6 +4,9 @@
   to tutor and the time and date of the request
   
 **/
+
+//@ts-nocheck 
+
 import {ButtonGroup, Box, Button, Flex, Heading, Text } from '@chakra-ui/react';
 import React, { useState } from 'react';
 

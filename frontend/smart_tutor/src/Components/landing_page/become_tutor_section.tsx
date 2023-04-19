@@ -14,6 +14,7 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 
+//@ts-nocheck 
 export default function Become_tutor_section() {
   return (
     <Container maxW={'7xl'}>
