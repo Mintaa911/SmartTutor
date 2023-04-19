@@ -6,7 +6,7 @@ async function newReview(req, res) {
 
   try {
     let rv = await Review.findOne({ name: req.body.name });
-    if (at) return res.status(401).json({ name: "Review Already Exists" });
+    if (rv) return res.status(401).json({ name: "Review Already Exists" });
 
     let review = new Review(req.body);
     review = await review.save();

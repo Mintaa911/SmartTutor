@@ -60,11 +60,34 @@ async function login(req, res) {
   }
 }
 
-async function logout(req, res) {
-  res.clearCookie("access_token");
-  res.json({
-    msg: "Logout Successful",
-  });
+async function isAuth(req, res, next) {
+  let token;
+  if (
+    req.headers.authorization &&
+    req.headers.authorization.split(" ")[0] == "Bearer"
+  ) {
+    token = req.headers.authorization.split(" ")[1];
+  }
+  if (!token) {
+    return next(new ErrorResponse("Unauthorized route", 401));
+  }
+  try {
+    const data = jwt.verify(token, process.env.JWT_SECRET);
+    let user = await User.findById(data.id);
+    if (!user) {
+      return next(new ErrorResponse("Unauthorized route", 401));
+    }
+    user =
+      data.id.toString() && user.role.id.toString() == data.role.toString();
+
+    if (!user) {
+      return res.redirect("/auth/login");
+    }
+    res.user = user;
+    next();
+  } catch {
+    res.status(500).json({ msg: "Internal Server Error" });
+  }
 }
 
-export { signUp, login, logout };
+export { signUp, login };
