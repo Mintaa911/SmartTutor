@@ -1,4 +1,4 @@
-//@ts-nocheck 
+//@ts-nocheck
 
 import {
 	Container,
@@ -16,7 +16,6 @@ import {
 	useColorModeValue,
 } from "@chakra-ui/react";
 
-//@ts-nocheck
 export default function Become_tutor_section() {
 	return (
 		<div>
