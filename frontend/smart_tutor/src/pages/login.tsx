@@ -21,7 +21,9 @@ function LoginPage() {
     <Box
       w="100%"
       minH="100vh"
-      d="flex"
+      w="100%"
+      minH="100vh"
+      display="flex"
       alignItems="center"
       justifyContent="center"
     >
