@@ -30,7 +30,6 @@ export default function RequestCard({
 }) {
 	const toast = useToast();
 	const [feedback, setFeedback] = useState("");
-	const [cancelled, setCancelled] = useState(false);
 	const [rating, setRating] = useState("");
 	const {
 		isOpen: isOpenRequest,
@@ -98,17 +97,17 @@ export default function RequestCard({
 					<Button variant='outline' onClick={onOpenRequest}>
 						Request Letter
 					</Button>
-					{!cancelled && feedback ? (
+					{status === "accepted" ? (
 						<Button variant='outline' onClick={onOpenFeedback}>
 							View Feedback
 						</Button>
+					) : status === "pending" ? (
+						<Button colorScheme={"green"} variant='outline'>
+							Pending
+						</Button>
 					) : (
-						<Button
-							leftIcon={<AddIcon />}
-							variant='outline'
-							onClick={onOpenReview}
-						>
-							Give Feedback
+						<Button colorScheme={"red"} variant='outline'>
+							Rejected
 						</Button>
 					)}
 				</div>

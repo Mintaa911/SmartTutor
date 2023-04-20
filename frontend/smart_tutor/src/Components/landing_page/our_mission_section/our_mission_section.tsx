@@ -18,20 +18,35 @@ export default function Our_mission_section() {
 		<div>
 			<h1 className='text-2xl font-bold text-center mb-4'>Our Mission</h1>
 			<div className='flex justify-between'>
-				<MissionCard title='Empowering African Students Through Online Tutoring'>
+				<MissionCard
+					title='Empowering African Students Through Online Tutoring'
+					image={
+						"https://res.cloudinary.com/eskalate/image/upload/v1/support-us/q-a_jp33ti"
+					}
+				>
 					To provide accessible and affordable education to underserved African
 					students by connecting them with expert tutors and mentors from around
 					the world.
 				</MissionCard>
 
-				<MissionCard title='Transforming Education in Africa with SmartTutor'>
+				<MissionCard
+					title='Transforming Education in Africa with SmartTutor'
+					image={
+						"https://res.cloudinary.com/eskalate/image/upload/v1/support-us/interviews_h9e4qi"
+					}
+				>
 					{" "}
 					To empower African students with the knowledge and skills needed to
 					succeed in their academic and professional pursuits, while also
 					fostering a sense of community and collaboration.{" "}
 				</MissionCard>
 
-				<MissionCard title='Revolutionizing Learning with SmartTutor'>
+				<MissionCard
+					title='Revolutionizing Learning with SmartTutor'
+					image={
+						"https://res.cloudinary.com/eskalate/image/upload/v1/support-us/mentorship_s6ocyp"
+					}
+				>
 					{" "}
 					To revolutionize the education system in Africa by leveraging
 					technology and the power of community to provide personalized and

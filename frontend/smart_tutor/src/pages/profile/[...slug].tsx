@@ -2,13 +2,43 @@ import React from "react";
 import RequestCard from "../../Components/TutorRequestCard";
 import { Avatar, Button, ButtonGroup, Divider } from "@chakra-ui/react";
 
-const myProp = {
-	tutor: "Mr.John",
-	subject: "Math",
-	time: "11:00am",
-	date: "2023-04-29",
-	status: "pending",
-};
+let requests = [
+	{
+		tutor: "Biruk Ayalew",
+		subject: "Math ,JavaScript, React, Node.js, HTML, CSS",
+		time: "2:00 AM",
+		date: "8/2/2021",
+		status: "pending",
+	},
+	{
+		tutor: "Mahlet Dereje",
+		subject: "JavaScript, React, Node.js, HTML, CSS",
+		time: "7:00 PM",
+		date: "10/7/2020",
+		status: "pending",
+	},
+	{
+		tutor: "Süha Tanriverdi",
+		subject: "Back-End, Python, Django, Flask, SQL, Git",
+		time: "2:00 AM",
+		date: "8/1/2021",
+		status: "rejected",
+	},
+	{
+		tutor: "Peter Michel",
+		subject: "Python, SQL, Git",
+		time: "2:00 AM",
+		date: "1/1/2021",
+		status: "accepted",
+	},
+	{
+		tutor: "Alice Doe",
+		subject: "Python, Flask, SQL, Git",
+		time: "2:00 AM",
+		date: "7/21/2021",
+		status: "accepted",
+	},
+];
 
 export default function Profile() {
 	return (
@@ -46,12 +76,18 @@ export default function Profile() {
 			<div className='px-6'>
 				<h1 className='text-2xl mb-5'>Activity</h1>
 				<div>
-					<RequestCard {...myProp} />
-					<Divider orientation='horizontal' borderWidth={1} className='my-2' />
-					<RequestCard {...myProp} />
-					<Divider orientation='horizontal' borderWidth={1} className='my-2' />
-					<RequestCard {...myProp} />
-					<Divider orientation='horizontal' borderWidth={1} className='my-2' />
+					{requests.map((myProps) => {
+						return (
+							<div key={`${myProps.tutor}${myProps.time}`}>
+								<RequestCard {...myProps} />
+								<Divider
+									orientation='horizontal'
+									borderWidth={1}
+									className='my-2'
+								/>
+							</div>
+						);
+					})}
 				</div>
 			</div>
 		</div>
