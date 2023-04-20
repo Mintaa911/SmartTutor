@@ -55,9 +55,11 @@ export default function Profile() {
 						<div className='md:w-96'>
 							<h1 className='text-xl mb-2'>Dan Abrahmov</h1>
 							<p>
-								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam
-								aperiam voluptatem magni dolor veritatis officia adipisci
-								repudiandae vitae? Est, ad?
+								Elon Reeve Musk FRS is a business magnate and investor. He is
+								the founder, CEO and chief engineer of SpaceX; angel investor,
+								CEO and product architect of Tesla, Inc.; owner and CEO of
+								Twitter; founder of the Boring Company; co-founder of Neuralink
+								and OpenAI
 							</p>
 						</div>
 						<div className='mt-4 md:grow-2'>

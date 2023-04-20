@@ -119,10 +119,9 @@ export default function RequestCard({
 					<ModalCloseButton />
 					<ModalBody>
 						<p>
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia
-							quis nobis consequatur veritatis vitae perferendis culpa quas,
-							magnam ipsum maiores reiciendis? Impedit exercitationem
-							praesentium ducimus temporibus, error porro delectus obcaecati.
+							A formal letter of request will typically follow the standard
+							business letter format, which includes the following pieces in
+							this order
 						</p>
 					</ModalBody>
 				</ModalContent>
@@ -134,10 +133,12 @@ export default function RequestCard({
 					<ModalCloseButton />
 					<ModalBody>
 						<p>
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia
-							quis nobis consequatur veritatis vitae perferendis culpa quas,
-							magnam ipsum maiores reiciendis? Impedit exercitationem
-							praesentium ducimus error porro delectus obcaecati.
+							The presence of lions, hyenas, hippos, wildebeests, zebras (which
+							injure more zoo personnel than any other animal — why they cannot
+							be domesticated) must crowd out enormous amounts of resources as
+							well as making life just too dangerous. How free can poor
+							subsistence farmers feel to innovate or invest when their every
+							movement is hemmed in by an open zoo?
 						</p>
 					</ModalBody>
 				</ModalContent>
