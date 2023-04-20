@@ -29,17 +29,17 @@ const getUser = async (req, res, next) => {
 };
 
 const newRequest = async (req, res, next) => {
-  const messages = validateRequest(req.body);
-  if (messages) return res.status(401).send(messages);
+  // const messages = validateRequest(req.body);
+  // if (messages) return res.status(401).send(messages);
 
   try {
-    let rq = await Request.findOne({ name: req.body.notes });
-    if (rq) return res.status(401).json({ name: "Request Already Exists" });
+    // let rq = await Request.findOne({ name: req.body.notes });
+    // if (rq) return res.status(401).json({ name: "Request Already Exists" });
 
     let request = new Request(req.body);
     request = await request.save();
 
-    return res.status(200).json({ request_id: request.id });
+    return res.status(200).json({ data: { request_id: request.id } });
   } catch (e) {
     return res.status(500).json({ message: "Internal server Error" });
   }
