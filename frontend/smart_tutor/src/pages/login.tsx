@@ -8,13 +8,21 @@ import {
 	Button,
 	Heading,
 } from "@chakra-ui/react";
+import { signIn } from "next-auth/react";
 
 function LoginPage() {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 
-	const handleSubmit = (event) => {
+	const handleSubmit = async (event) => {
 		event.preventDefault();
+		const loginForm = { email: email, password: password };
+		// console.log(loginForm);
+		await signIn("signin", {
+			...loginForm,
+			callbackUrl: "http://localhost:3000",
+			// redirect: false,
+		});
 		// Handle form submission
 	};
 	return (

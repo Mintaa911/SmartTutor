@@ -1,3 +1,4 @@
+//@ts-nocheck
 import React from "react";
 import AddIcon from "@mui/icons-material/Add";
 import { Input, Button } from "@chakra-ui/react";
@@ -11,6 +12,7 @@ import {
 	ModalBody,
 	ModalCloseButton,
 	useDisclosure,
+	useToast,
 } from "@chakra-ui/react";
 import { useFormik } from "formik";
 export default function RequestCard({
@@ -26,9 +28,10 @@ export default function RequestCard({
 	date: string;
 	status: string;
 }) {
-	const [feedback, setFeedback] = useState(false);
+	const toast = useToast();
+	const [feedback, setFeedback] = useState("");
 	const [cancelled, setCancelled] = useState(false);
-	const [rating, setRating] = useState(0);
+	const [rating, setRating] = useState("");
 	const {
 		isOpen: isOpenRequest,
 		onOpen: onOpenRequest,
@@ -50,9 +53,16 @@ export default function RequestCard({
 		validationSchema: {},
 		onSubmit: (value) => {},
 	});
-	const handleRating = (rate: number) => {
-		console.log(rate);
-		setRating(rate);
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		toast({
+			title: "Feedback given",
+			description: "Successfully send feedback",
+			status: "success",
+			duration: 2000,
+			isClosable: true,
+		});
 	};
 
 	return (
@@ -139,10 +149,30 @@ export default function RequestCard({
 					<ModalHeader>Give Feedback</ModalHeader>
 					<ModalCloseButton />
 					<ModalBody>
-						<form>
-							<Input placeholder='Your feedback' className='my-2' />
+						<form onSubmit={handleSubmit}>
+							<Input
+								placeholder='Your feedback'
+								className='my-2'
+								value={feedback}
+								onChange={(e) => {
+									setFeedback(e.target.value);
+								}}
+							/>
+							<Input
+								placeholder='rate from 1 to 5'
+								className='my-2'
+								value={rating}
+								onChange={(e) => {
+									setRating(e.target.value);
+								}}
+							/>
 							<div className='flex justify-end'>
-								<Button colorScheme='blue' type='submit' variant='outline'>
+								<Button
+									colorScheme='blue'
+									type='submit'
+									variant='outline'
+									onClick={onCloseReview}
+								>
 									Submit
 								</Button>
 							</div>
