@@ -23,10 +23,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Routes
+app.use("/api/v1/", search);
 app.use("/api/v1/auth", auth);
 app.use("/api/v1/user", user);
 app.use("/api/v1/review", review);
-app.use("/api/v1/", search);
 
 // Run Server
 app.use(ErrorHandler);
