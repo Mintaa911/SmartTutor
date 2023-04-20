@@ -66,4 +66,18 @@ const topRated = async (req, res, next) => {
     res.status(500).json({ msg: "Internal Server Error" });
   }
 };
-export { search, getTutors, getTutorById };
+
+const allTags = async (req, res, next) => {
+  try {
+    let users = await User.find({});
+    let tags = [];
+    users.forEach((user) => {
+      tags = tags.concat(user.tags);
+    });
+    tags = [...new Set(tags)];
+    res.status(200).json({ data: tags });
+  } catch (err) {
+    res.status(500).json({ msg: "Internal Server Error" });
+  }
+};
+export { search, getTutors, getTutorById, topRated, allTags };
