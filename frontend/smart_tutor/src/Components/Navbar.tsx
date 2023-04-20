@@ -14,27 +14,34 @@ import {
 } from "@chakra-ui/react";
 import SearchBar from "./Cards/Search_bar";
 import SearchResults from "./Cards/Search_result/Search_result_list";
+import { useSession } from "next-auth/react";
 
 export default function Navbar() {
-	const [authenticated, setAuthenticated] = useState(true);
 	const [dropDown, setDropDown] = useState(false);
 	const { isOpen, onOpen, onClose } = useDisclosure();
+	let access_token = "";
+	const { data } = useSession();
+	if (data) {
+		access_token = data;
+	}
 
 	return (
 		<div>
 			<div className='flex justify-between shadow-md h-12 px-2 md:px-8 items-center mb-8'>
 				<div className='flex gap-4 md:gap-8'>
-					<h1 className='text-lg md:text-2xl'>SmartTutor</h1>
+					<Link href='/'>
+						<h1 className='text-lg md:text-2xl'>SmartTutor</h1>
+					</Link>
 					<div className='flex gap-4 items-center'>
 						<p>Home</p>
 						<p>Blog</p>
 					</div>
 				</div>
-				{authenticated ? (
+				{access_token ? (
 					<div className='flex gap-4 items-center pr-10'>
-						<div onClick={onOpen}>
+						<Link href={"/searchPage"}>
 							<SearchRoundedIcon />
-						</div>
+						</Link>
 						<Avatar
 							onClick={() => {
 								setDropDown(!dropDown);
@@ -97,7 +104,7 @@ export default function Navbar() {
 						<ModalCloseButton />
 						<ModalBody>
 							<SearchBar />
-							<SearchResults />
+							<SearchResults experts={[]} />
 						</ModalBody>
 					</ModalContent>
 				</Modal>

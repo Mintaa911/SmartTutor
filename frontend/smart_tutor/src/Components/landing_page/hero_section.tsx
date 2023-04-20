@@ -14,9 +14,11 @@ import {
 	createIcon,
 	IconProps,
 	useColorModeValue,
+	useToast,
 } from "@chakra-ui/react";
 
 export default function Hero_section() {
+	const toast = useToast();
 	return (
 		<div>
 			<Stack
@@ -63,11 +65,16 @@ export default function Hero_section() {
 						<Button
 							rounded={"full"}
 							size={"lg"}
-							fontWeight={"normal"}
-							px={6}
-							colorScheme={"red"}
-							bg={"red.400"}
-							_hover={{ bg: "red.500" }}
+							variant='outline'
+							onClick={() => {
+								toast({
+									title: "Feedback given",
+									description: "Functionality Coming Soon",
+									status: "success",
+									duration: 2000,
+									isClosable: true,
+								});
+							}}
 						>
 							Donate
 						</Button>

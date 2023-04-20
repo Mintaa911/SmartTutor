@@ -14,14 +14,35 @@ let profiles = [
 			"https://res.cloudinary.com/eskalate/image/upload/dpr_auto,f_auto,q_auto/v1/team/suha",
 		name: "Süha Tanriverdi",
 		bio: "A highly motivated fresh software engineer seeking to get a position in top tech companies who comes from a professional sports background, passionate about entrepreneurship, music, and life.",
-		rating: 4.5,
+		rating: 4.9,
 	},
 	{
 		profilePic:
 			"https://res.cloudinary.com/eskalate/image/upload/dpr_auto,f_auto,q_auto/v1/team/yohans_h",
 		name: "Yohans Hailu",
 		bio: "It's cliche to say that he enjoys learning and implementing technologies. Aside from that, he enjoys reading (almost always nonfiction), chess, and watching movies on occasion.",
-		rating: 4.5,
+		rating: 4.8,
+	},
+	{
+		profilePic:
+			"https://res.cloudinary.com/eskalate/image/upload/dpr_auto,f_auto,q_auto/v1/team/mintesnot_b",
+		name: "Mintesnot Bezabhi",
+		bio: "A tech enthusiast software engineering student. Curious about learning new things. Before graduating he wants to explore the field of computer science and engineering. He is interested in web and mobile development, distributed systems and building large scale applications.",
+		rating: 4.8,
+	},
+	{
+		profilePic:
+			"https://res.cloudinary.com/eskalate/image/upload/dpr_auto,f_auto,q_auto/v1/team/abenezer_f-min",
+		name: "Abenezer Fikadu",
+		bio: "An undergraduate of Software Engineering who is energetic and eager to learn new skills and try to use a creative approach to problem solving.",
+		rating: 4.8,
+	},
+	{
+		profilePic:
+			"https://res.cloudinary.com/eskalate/image/upload/dpr_auto,f_auto,q_auto/v1/team/Biruk_A ",
+		name: "Biruk Ayalew",
+		bio: "A hardworking and tech enthusiast who is currently pursuing his software engineering bachelor's degree at Addis Ababa University. He has much emphasis about being creative and problem solver. In the future, he plans to explore and indulge himself in Artificial Intelligence. As a hobby, he likes to read books ,watch movies and play football. ",
+		rating: 4.8,
 	},
 ];
 
