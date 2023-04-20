@@ -13,7 +13,7 @@ async function signUp(req, res) {
 
   // Check if the user exists
   try {
-    let user = await User.findOne({ email: req.body.email.toLowerCase() });
+    let user = await User.find({ email: req.body.email.toLowerCase() });
     if (user) return res.status(400).json({ msg: "User Already Exists" });
 
     // Save User
@@ -24,6 +24,7 @@ async function signUp(req, res) {
     user.hashedPassword = undefined;
     res.status(201).send({ data: user });
   } catch (err) {
+    console.error(err);
     res.status(500).json({ msg: "Internal Server Error" });
   }
 }
@@ -38,10 +39,10 @@ async function login(req, res) {
   const email = req.body.email.toLowerCase();
   try {
     // check User
-    let user = await User.findOne({ email });
+    let user = await User.find({ email });
     if (!user) return res.status(400).json({ msg: "User Doesn't Exists" });
 
-    if (!user.authenticate(password)) {
+    if (!user[0].authenticate(password)) {
       return res.status(400).json({
         msg: "Email and Password don't match",
       });
@@ -49,7 +50,7 @@ async function login(req, res) {
     // Generate Token
     const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET);
     // res.cookie("access_token", token, { expire: new Date() + 9999 });
-    const { _id, name, phone, bio, tags, role } = user;
+    const { _id, name, phone, bio, tags, role } = user[0];
 
     res
       .status(200)
